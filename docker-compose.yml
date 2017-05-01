@@ -2,5 +2,10 @@ version: '2'
 services:
   embark:
     build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "8545:8545"
+      - "30303:30303"
     volumes:
-     - .:/home/app
+      - .:/home/app
